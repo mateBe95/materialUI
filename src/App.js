@@ -1,51 +1,57 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import React, { Component } from 'react'
+import './App.css'
+import './styles/materialize-grid.css'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
+/* Material-UI */
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import fusTheme from './fusTheme'
+
+import SideNav from './SideNav'
+
+/* Import Views */
+import Glossary from './views/Glossary'
+import Home from './views/Home'
+import Letterhead from './views/Letterhead'
+import Logos from './views/Logos'
+import PlanningGuide from './views/PlanningGuide'
+import Posters from './views/Posters'
+import ServiceRequest from './views/ServiceRequest'
+import Services from './views/Services'
+import Story from './views/Story'
+import Tutorial from './views/Tutorial'
+import NotFound from './views/NotFound'
+
+injectTapEventPlugin()
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-  }
-
-  handleClick(){
-    this.setState({
-      open: !this.state.open
-    })
-  }
-
-   handleClose() {
-  this.setState({
-    open: false
-  })
-   } 
-  
-  render() {
+  render () {
     return (
-      <div className="App">
-         <AppBar
-            title="Title"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
-            onLeftIconButtonClick	= {() => this.handleClick()}
-            
-          />
-          <Drawer 
-          open={this.state.open}
-          docked={false}
-          onRequestChange={(open)=>this.setState({open})}
-          >
-          <MenuItem onClick={()=> this.handleClose()}>Menu Item</MenuItem>
-          <MenuItem onClick={()=> this.handleClose()}>Menu Item 2</MenuItem>
-        </Drawer>
-      </div>
-    );
+      <BrowserRouter>
+        <MuiThemeProvider muiTheme={getMuiTheme(fusTheme)}>
+          <div>
+            <SideNav />
+
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/logos' component={Logos} />
+              <Route path='/posters' component={Posters} />
+              <Route path='/letterhead' component={Letterhead} />
+              <Route path='/share-a-story' component={Story} />
+              <Route path='/planning-guide' component={PlanningGuide} />
+              <Route path='/services' component={Services} />
+              <Route path='/glossary' component={Glossary} />
+              <Route path='/service-request-form' component={ServiceRequest} />
+              <Route path='/tutorial' component={Tutorial} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+        </MuiThemeProvider>
+      </BrowserRouter>
+    )
   }
 }
 
-export default App;
+export default App
