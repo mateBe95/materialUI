@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import './App.css'
 import './styles/materialize-grid.css'
+import './styles/responsive-text.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 /* Material-UI */
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+
 import fusTheme from './fusTheme'
 
 import SideNav from './SideNav'

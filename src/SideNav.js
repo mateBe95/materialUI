@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
-import MenuItem from 'material-ui/MenuItem'
-import SvgIconExampleIcons from './icons'
 import SideBarItem from './SideBarItem';
 
 
@@ -51,10 +48,8 @@ class SideNav extends Component {
                 isExact={link.isExact}
                 linkTo={link.linkTo}
                 primaryText={link.text}
-                handleClose={this.handleClose}
+                onClick={this.handleClose}
                 key={i}
-            
-                
               />
             )
           })}

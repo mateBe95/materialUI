@@ -1,8 +1,32 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class Story extends Component {
-  render () {
-    return <h1>Share a Story View</h1>
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col s12 flow-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in.</p>
+
+            <p>We will look into each tip and determine where it might fit—on the website,
+              in admissions materials, as a media story, social media post, and so on.</p>
+
+            <p>Thank you for your help identifying the great work happening in the
+              Franciscan University family.</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
