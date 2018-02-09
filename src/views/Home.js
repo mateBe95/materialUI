@@ -5,9 +5,9 @@ class Home extends Component {
   state = {}
   render() {
     return (
-      <div className="container">
+      <div className="container flow-text ">
         <div className="row">
-          <div className="col s12 m4">
+          <div className="col s12 m4 ">
             <Card>
               <CardTitle title="Card title" subtitle="Card subtitle"/>
               <CardText>

@@ -6,7 +6,7 @@ class Posters extends Component {
   state={}
   render () {
     return(
-    <div className="container">
+    <div className="container flow-text">
     <div className="row">
       <div className="col s12 m6">
         <Card>

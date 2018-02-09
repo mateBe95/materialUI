@@ -29,9 +29,9 @@ class SideNav extends Component {
 
   render () {
     return (
-      <div>
+      <div style={{marginBottom:'20px'}} >
         <AppBar
-          title='Resource Center'
+          title='React Website'
           iconClassNameRight='muidocs-icon-navigation-expand-more'
           onLeftIconButtonClick={() =>
             this.setState({ open: !this.state.open })}

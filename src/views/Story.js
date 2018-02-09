@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Story extends Component {
   render() {
@@ -25,7 +27,37 @@ class Story extends Component {
               Franciscan University family.</p>
           </div>
         </div>
+        <div className="row">
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Floating Label Text"
+              fullWidth={true}/>
+
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Floating Label Text"
+              fullWidth={true}/>
+          </div>
+
+        </div>
+        <div className="row">
+          <div className="col s12">
+            <TextField
+              floatingLabelText="MultiLine and FloatingLabel"
+              multiLine={true}
+              fullWidth={true}/>
+          </div>
+          <div className="col s12">
+            <RaisedButton 
+            fullWidth={true}
+            label="Submit" 
+            primary={true}/>
+          </div>
+
+        </div>
       </div>
+
     )
   }
 }

@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import LetterheadCard from '../LetterheadCard'
+import LetterheadCard from '../components/LetterheadCard'
 
 class Letterhead extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container flow-text">
         <div className="row">
           <div className="col s12">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -30,15 +30,15 @@ class Letterhead extends Component {
             <LetterheadCard
               title='Card title'
               action='Action1'
-              image='https://placeimg.com/600/776/knowledge'/>
+              image='https://placeimg.com/600/776/know'/>
             <LetterheadCard
               title='Card title'
               action='Action1'
-              image='https://placeimg.com/600/776/water'/>
+              image='https://placeimg.com/600/776/tech'/>
             <LetterheadCard
               title='Card title'
               action='Action1'
-              image='https://placeimg.com/600/776/architecture'/>
+              image='https://placeimg.com/600/776/arch'/>
             <LetterheadCard
               title='Card title'
               action='Action1'
